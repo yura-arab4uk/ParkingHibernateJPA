@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                                http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="psunit1">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.parking.model.entities.Brand</class>
+        <class>com.parking.model.entities.Car</class>
+        <class>com.parking.model.entities.CarRider</class>
+        <class>com.parking.model.entities.Color</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/parkinghibernate?useUnicode=true&amp;characterEncoding=UTF-8"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="1111"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"></property>
+
+        </properties>
+
+    </persistence-unit>
+</persistence>
